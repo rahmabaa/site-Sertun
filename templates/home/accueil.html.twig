@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+{% block head %}
+ {% block stylesheets %}
+ <link rel="stylesheet" href="{{asset('css/accueil.css')}}" type="text/css">
+
+ 
+{% endblock %}
+{% endblock %}
+{% block body %}
+<div class="divImg">
+<img src="{{ asset('images/dar.png') }}" id="img">
+<p id="pimg">Domiciliez votre entreprise à tunis</p>
+<a id="btnimg"type="submit"  href="#h8">Contactez-nous</a>
+</div>
+<div style="background-color:transparent;
+width: 100%;
+height:480px;"></div>
+{% include 'contact/index.html.twig' %}
+<div style="background-color:transparent;
+width: 100%;
+height:400px;"></div>
+{% include 'contact/pagecontact.html.twig' %}
+{% endblock %}

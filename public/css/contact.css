@@ -1,0 +1,99 @@
+*{
+    padding:0;
+    margin:0;
+}
+.divVide{
+    background-color:transparent;
+    width: 100%;
+    height:50px;
+}
+.grandDiv{
+    background-color:#191919;
+    width: 100%;
+    height:500px;
+}
+.sertun{
+background-color:transparent;
+   height:50px;
+   width: 100%;
+   
+}
+.sertun h1{
+text-transform: capitalize;
+ font-family:'Times New Roman', Times, serif;
+ font-style: normal;
+ color: white;
+ text-align: center;
+ font-size:40px;
+}
+.email{
+    background-color:transparent;
+    height: 50px;
+}
+.email p{
+
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 17px;
+    color:gray;
+    text-align: center;
+}
+.email p:hover{ color:white;}
+.adresse{
+    background-color:transparent;
+    height: 50px;   
+}
+.adresse a{
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 17px;
+    color:gray;
+    /*text-align: center;*/
+    display: flex;
+    justify-content: center;
+}
+.adresse a:hover{ color:white;
+text-decoration: none;}
+.tel{
+    background-color:transparent;
+    height: 50px;
+}
+.tel p{
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 17px;
+    color:gray;
+    text-align: center; 
+}
+ .tel p:hover{ color:white;}
+.icon{
+    background-color:transparent;
+    width: 100%;
+    height:90px;
+    /*position:relative;*/
+    display: flex;
+    justify-content: center;
+    
+}
+i{
+color: white;
+font-size: 30px;
+margin: 8px;    
+}
+ .icon i{
+    
+    color: white;
+    font-size:45px;
+    margin:8px;
+   /* margin-left: auto;  margin-right: auto;*/
+    margin-top:25px;
+    
+    
+}
+.COPYRIGHT p{
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    
+    color:gray;
+    text-align: center;   
+}

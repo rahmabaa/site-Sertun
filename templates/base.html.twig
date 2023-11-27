@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+            SERTUN 97
+{% endblock %}
+
+</title>
+<link rel="icon" type="image/x-icon" href="{{ asset('images/sertun.png') }}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('css/stylenavbar.css')}}" type="text/css">
+{% block stylesheets %}
+
+{% endblock %}
+</head>
+    <body>
+        <nav class="nav1">
+           <img src="{{ asset('images/sertun.png') }}" alt="passss"
+             style="width:11%;height:90px;padding:0;margin:2px;">
+        <div class="centerNav" id="">
+        <ul class="">
+        <li class="">
+          <a class="" href="{{path('accueil')}}">Accueil
+           
+          </a>
+        </li>
+        <li class="">
+          <a class="" href="{{path('propos')}}">A propos 
+           
+          </a>
+        </li>
+        <li class="">
+          <a class="" href="{{path('adresses')}}">Adresses</a>
+        </li>
+        
+        <li class="">
+          <a class="" href="{{path('tarif')}}">Tarif</a>
+        </li>
+    </div>
+    
+
+<button class="num" type="submit"> 
+<img src="{{ asset('images/telephone.png') }}"
+style="width:28px;height:30px;float:lefet;
+background-color:FF4500;"
+class="img">
+(+216)29189868 
+
+</button>
+
+</nav>
+{% block body %} {% endblock %} 
+</body>
+</html>

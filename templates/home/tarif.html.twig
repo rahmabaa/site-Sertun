@@ -1,0 +1,74 @@
+ 
+ {% extends "base.html.twig" %}
+ 
+ {% block head %}
+ {% block stylesheets %}
+ <link rel="stylesheet" href="{{asset('css/tarif.css')}}" type="text/css">
+{% endblock %}
+{% endblock %}
+ {% block body %}
+ {% for message in app.flashes('success') %}
+ <div class="alert alert-dismissible alert-success mt-4">
+ {{ message }}
+ </div>
+ {% endfor %}
+<div id="cards">
+<h1> Nous vous proposons différentes formules de domiciliation d'entreprise 
+en fonction de vos besoins  </h1>
+ <div class="card"  >
+   <div style="height:10px;"> </div>
+    <div class="card-body">
+     <h5 class="card-title" id="card-title">70 dt/HT (mois)</h5>
+     <ul class="liste">
+     <li class="liliste">Adresses administratives</li>
+     <li class="liliste">Notification par mail lors de la réception du courrier </li>
+     <li class="liliste"> Mise à disposition d'un espace de réunion(gratuit)</li>
+     <li class="liliste">Scan et envoie de votre courrier par email</li>
+     <li class="liliste">Renvoi de votre courrier vers l'adresse de votre choix</li>
+     <li class="liliste">Signature des documents à votre place si vous êtes hors du Tunisie</li>
+  </ul> 
+    <a href="#" class="btn btn-primary"id="btn">commandez</a>
+</div>
+ </div>
+ <!--div2-->
+ <div class="card"  >
+   <div style="height:10px;"> </div>
+    <div class="card-body">
+     <h5 class="card-title" id="card-title">90 dt/HT (mois)</h5>
+     
+ 
+     <ul class="liste">
+     <li class="liliste">Adresses administratives</li>
+     <li class="liliste">Notification par mail lors de la réception du courrier </li>
+     <li class="liliste"> Mise à disposition d'un espace de réunion(gratuit)</li>
+     <li class="liliste">Scan et envoie de votre courrier par email</li>
+     <li class="liliste">Renvoi de votre courrier vers l'adresse de votre choix</li>
+     <li class="liliste">Signature des documents à votre place si vous êtes hors du Tunisie</li>
+     </ul> 
+    
+     <a href="#" class="btn btn-primary"id="btn">commandez</a>
+    </div>
+ </div>
+ <!--div2-->
+<div class="card"  >
+<div style="height:10px;"> </div>
+ <div class="card-body">
+  <h5 class="card-title" id="card-title">120 dt/HT (mois)</h5>
+  <ul class="liste">
+  <li class="liliste">Adresses administratives</li>
+  <li class="liliste">Notification par mail lors de la réception du courrier </li>
+  <li class="liliste"> Mise à disposition d'un espace de réunion(gratuit)</li>
+  <li class="liliste">Scan et envoie de votre courrier par email</li>
+  <li class="liliste">Renvoi de votre courrier vers l'adresse de votre choix</li>
+  <li class="liliste">Signature des documents à votre place si vous êtes hors du Tunisie</li>
+  </ul> 
+ 
+  <a href="#" class="btn btn-primary"id="btn">commandez</a>
+ </div>
+</div>
+</div>
+<div style="background-color:transparent;
+width: 100%;
+height:50px;"></div>
+{% include 'contact/pagecontact.html.twig' %}
+{% endblock %} 
