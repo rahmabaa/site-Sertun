@@ -105,85 +105,126 @@
  h1{text-align: center;
 margin: 10px;
 } */
-.card{
-  
-   margin:20px;
-   border-radius:5px ;
-   display: inline-block;
-   text-align: center;
-   width:330px;
-   margin-top:9px;
-   height:auto;
-   background-color:white;
-   align-items: flex;
-   justify-content: center;
-   box-shadow:
-     inset 0 0 0.5em white,
-     0 0 0.5em white;
-     border:2px solid #FF4500;
- }
- #cards{
- background-color:transparent;
- height:550px;
- text-align: center;
- position:relative;
-  
- }
-  #card-title{
- margin:10px;
- font-size:30px ;
- font-family:'Times New Roman', Times, serif;
- font-style: normal;
-  } 
- #card-text{
- margin:10px;
- font-size:15px;
- font-family:'Times New Roman', Times, serif;
- font-style: normal;
- flex-direction: column;
- align-items: center;
- text-align: center
- } 
- #btn{
-   border:none;
-   border-radius:15px;
-   margin:10px;
-   background-color: #FF4500;
- }
- ul.liste{
-    list-style-type:none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li.liliste{
-    padding-left:1px;
-    color:black;
-     margin:8px;
-    text-align:left;
-    font-family:'Times New Roman', Times, serif;
-    font-style:normal;
-    font-weight:bold;
-    font-size:16px;
-  }
-  li.liliste::before{
-    content: "✓";
-    padding-right:5px;
-    color:#010710;
-    font-size:18px;
-  }
-  h4{
-     text-align:left ;
 
-  }
-  h6{
-   text-align:left ;  
-  }
-  h1{
-     color: gray;
-     font-size: 22px;
-     font-family:'Times New Roman', Times, serif;
+.card {
+    /* margin: 20px; */
+    /* border-radius: 5px; */
+    display: inline-block;
+    text-align: center;
+    width: 22%;
+    /* margin-top: 20px; */
+    /* margin-right: 10px; */
+    /* margin-bottom: 20px; */
+    margin: 5px;
+    height: auto;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 2px 10px -3px #D8D8D8; */
+    border: 3px solid white;
+}
+
+#cards {
+    /* background-color: #F5F5F5; */
+    height: 650px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    background-image: url('/images/CARDSS.jpg');
+    background-size: cover;
+    /* position: fixed; */
+}
+
+#card-title {
+    margin: 2px;
+    color: #0087ff;
+    justify-content: center;
+    font-size: 22px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-style: normal;
+    font-family: 'Arial', sans-serif;
+}
+
+#card-text {
+    margin: 10px;
+    font-size: 15px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-style: normal;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+#btn {
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    color: white;
+    background-color: #0087ff;
+}
+
+ul.liste {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    display: list-item;
+    margin: 0;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+li.liliste {
+    padding-left: 1px;
+    color: #333;
+    margin: 8px;
+    display: inline-block;
+    /* text-align: center; */
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    /* font-weight: bold; */
+    font-size: 16px;
+    margin-left: 15px;
+    border-top: 2px solid gainsboro;
+}
+
+#hedhi {
+    margin-left: 17px;
+    width: 90%;
+    border-top: none;
+}
+
+li.liliste::before {
+    /* content: "✓"; */
+    padding-right: 5px;
+    color: #333;
+    /* border-bottom: 1px solid green; */
+    font-size: 18px;
+}
+
+h1 {
+    margin-top: 15px;
+    /* color: #FF4500; */
+    color: #0087ff;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: normal;
-    
-  }
+    /* display: none; */
+}
+
+h3 {
+    margin-top: 1px;
+    color: #333;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* gray loun l fou9 tarif #696969  loun l a mta3 navbar*/

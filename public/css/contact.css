@@ -1,99 +1,292 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
-.divVide{
-    background-color:transparent;
+
+.divVide {
+    background-color: transparent;
     width: 100%;
-    height:50px;
-}
-.grandDiv{
-    background-color:#191919;
-    width: 100%;
-    height:500px;
-}
-.sertun{
-background-color:transparent;
-   height:50px;
-   width: 100%;
-   
-}
-.sertun h1{
-text-transform: capitalize;
- font-family:'Times New Roman', Times, serif;
- font-style: normal;
- color: white;
- text-align: center;
- font-size:40px;
-}
-.email{
-    background-color:transparent;
     height: 50px;
 }
-.email p{
 
-    font-family:'Times New Roman', Times, serif;
+.grandDiv {
+    background-color: #191919;
+    width: 100%;
+    height: 500px;
+}
+
+.sertun {
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+}
+
+.sertun h1 {
+    text-transform: capitalize;
+    /*font-family: 'Times New Roman', Times, serif;*/
     font-style: normal;
-    font-size: 17px;
-    color:gray;
+    color: white;
     text-align: center;
+    font-size: 40px;
+    font-family: 'Arial', sans-serif;
 }
-.email p:hover{ color:white;}
-.adresse{
-    background-color:transparent;
-    height: 50px;   
+
+.divformulaire h1 {
+    color: #333;
 }
-.adresse a{
-    font-family:'Times New Roman', Times, serif;
+
+.email {
+    background-color: transparent;
+    height: 50px;
+}
+
+.email p {
+    /*font-family: 'Times New Roman', Times, serif;*/
     font-style: normal;
     font-size: 17px;
-    color:gray;
+    color: gray;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.email p:hover {
+    color: white;
+}
+
+.fa-map-marker {
+    margin-top: 0px
+}
+
+.adresse {
+    background-color: transparent;
+    height: 50px;
+}
+
+.adresse p {
+    /*font-family: 'Times New Roman', Times, serif;*/
+    font-style: normal;
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    color: gray;
     /*text-align: center;*/
     display: flex;
     justify-content: center;
 }
-.adresse a:hover{ color:white;
-text-decoration: none;}
-.tel{
-    background-color:transparent;
+
+.adresse a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.tel {
+    background-color: transparent;
     height: 50px;
 }
-.tel p{
-    font-family:'Times New Roman', Times, serif;
+
+.tel p {
+    /* font-family: 'Times New Roman', Times, serif;*/
     font-style: normal;
     font-size: 17px;
-    color:gray;
-    text-align: center; 
+    color: gray;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
- .tel p:hover{ color:white;}
-.icon{
-    background-color:transparent;
+
+.tel p:hover {
+    color: white;
+}
+
+.icon {
+    background-color: transparent;
     width: 100%;
-    height:90px;
+    height: 90px;
     /*position:relative;*/
     display: flex;
     justify-content: center;
-    
 }
-i{
-color: white;
-font-size: 30px;
-margin: 8px;    
-}
- .icon i{
-    
+
+i {
     color: white;
-    font-size:45px;
-    margin:8px;
-   /* margin-left: auto;  margin-right: auto;*/
-    margin-top:25px;
-    
-    
+    font-size: 30px;
+    margin: 8px;
 }
-.COPYRIGHT p{
-    font-family:'Times New Roman', Times, serif;
+
+.icon i {
+    color: white;
+    font-size: 45px;
+    margin: 8px;
+    /* margin-left: auto;  margin-right: auto;*/
+    margin-top: 25px;
+}
+
+a {
+    color: white;
+    font-size: 30px;
+    margin: 8px;
+}
+
+.icon a {
+    color: white;
+    font-size: 45px;
+    margin: 8px;
+    /* margin-left: auto;  margin-right: auto;*/
+    margin-top: 25px;
+}
+
+.icon a:hover {
+    text-decoration: none;
+}
+
+.COPYRIGHT p {
+    /*font-family: 'Times New Roman', Times, serif;*/
     font-style: normal;
-    
-    color:gray;
-    text-align: center;   
+    color: gray;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/***************css pour formulaire de contact**********************/
+
+#h8 {
+    width: 95%;
+    /* visibility: visible !important; */
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    box-shadow: 4px 5px 8px 4px #D3D3D3;
+    height: 590px;
+    margin-top: 8px;
+    /* margin-bottom: 20px; */
+    /* padding: 15px; */
+    margin-left: 30px;
+    /* border-radius: 10px; */
+    /* border: 1px solid #333; */
+    /*box-shadow: 0 2px 10px -3px #D3D3D3;*/
+}
+
+#form {
+    /* justify-content: center; */
+    margin-left: 0;
+    /* text-align: center; */
+    background-color: transparent;
+    width: 90%;
+}
+
+#form label {
+    /* margin-left: 1px; */
+    /* margin-right: 550px; */
+    float: left;
+}
+
+.divformulaire {
+    display: inline-block;
+    width: 50%;
+    align-items: flex;
+    justify-content: right;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    margin-top: 25px;
+}
+
+.divformulaire button {
+    padding: 10px 20px;
+    background-color: #0087ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.divformulaire label {
+    /* display: block; */
+    /* margin-bottom: 5px; */
+    text-align: left;
+}
+
+.divformulaire input[type="text"],
+.divformulaire input[type="email"],
+.divformulaire textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.divformulaire button:hover {
+    background-color: #0000FF;
+    color: white;
+}
+
+.divinformations {
+    width: 35%;
+    float: left;
+    margin-top: 50px;
+    margin-left: 40px;
+    background-color: transparent;
+    height: 430px;
+    margin-right: 80px;
+    background-image: url('/images/cont.jpg');
+    background-size: cover;
+    border-radius: 5px;
+    display: flexbox;
+    flex-wrap: wrap;
+    /*border: 2px solid #333;*/
+}
+
+.divinformations h5 {
+    /*color: black;*/
+    font-family: 'Arial' sans-serif;
+    font-size: 22px;
+    color: #333;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.adresseform {
+    font-family: 'Arial'sans-serif;
+    /* color: black;*/
+    text-align: center;
+    margin-left: 30px;
+    font-size: 19px;
+    margin-top: 25px;
+    font-style: normal;
+    color: #333;
+    margin-right: 40px;
+}
+
+.emailform {
+    color: #333;
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 40px;
+    font-size: 19px;
+    font-family: 'Arial'sans-serif;
+    font-style: normal;
+}
+
+.telform {
+    font-family: 'Arial'sans-serif;
+    color: #333;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 40px;
+    font-size: 19px;
+    font-style: normal;
+    margin-top: 21px;
+}
+
+.telform .fa-phone {
+    color: #333;
+}
+
+.emailform .fa-envelope-o {
+    color: #333;
+}
+
+.adresseform .fa-map-marker {
+    color: #333;
 }

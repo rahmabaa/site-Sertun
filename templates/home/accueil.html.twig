@@ -1,23 +1,33 @@
 {% extends "base.html.twig" %}
 {% block head %}
- {% block stylesheets %}
- <link rel="stylesheet" href="{{asset('css/accueil.css')}}" type="text/css">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/accueil.css') }}" type="text/css">
+        {% endblock %}
+    {% endblock %}
+    {% block body %}
+        {% include "/composant/_navbar.html.twig" %}
+        <div class="divImg">
+            <img src="{{ asset('images/bureau.jpg') }}">
+            <p id="pimg">
+            Domicilier votre entreprise à Tunis
+                            
+        </p>
+        <a id="btnimg" type="submit" href="{{path('contact')}}">
+            Contactez-nous
+                            
+        </a>
 
- 
-{% endblock %}
-{% endblock %}
-{% block body %}
-<div class="divImg">
-<img src="{{ asset('images/dar.png') }}" id="img">
-<p id="pimg">Domiciliez votre entreprise à tunis</p>
-<a id="btnimg"type="submit"  href="#h8">Contactez-nous</a>
-</div>
-<div style="background-color:transparent;
-width: 100%;
-height:480px;"></div>
-{% include 'contact/index.html.twig' %}
-<div style="background-color:transparent;
-width: 100%;
-height:400px;"></div>
-{% include 'contact/pagecontact.html.twig' %}
-{% endblock %}
+        
+        </div>
+            {# <div class="divvide"></div> #}
+            {# {% include 'composant/apropos.html.twig' %} #}
+            {# {% include '/contact/formulaire.html.twig' %} #}
+            {% include "/composant/pourquoi.html.twig" %}
+            {% include "/composant/adresse.html.twig" %}
+            {# <div class="divvide"></div> #}
+            {# {% include '/contact/formulaire.html.twig' %}  #}
+            
+            
+            {% include 'contact/pagecontact.html.twig' %}
+        {% endblock %}
+        

@@ -9,10 +9,13 @@ use App\Entity\Contact;
 use App\Form\SiteContactType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'accueil')]
-    public function index(Request $request,EntityManagerInterface $manager): Response
+    public function index(Request $request
+    ,EntityManagerInterface $manager,MailerInterface $mailer): Response
     { $contact = new Contact();
         $form=$this->createForm( SiteContactType::class,$contact);
         $form->handleRequest($request);
@@ -20,6 +23,24 @@ class HomeController extends AbstractController
            $contact = $form->getData();
           $manager->persist($contact);
           $manager->flush();
+          //email
+$email = (new Email())
+->from($contact->getEmail())
+->to('benattiarahma0@gmail.com')
+//->cc('cc@example.com')
+//->bcc('bcc@example.com')
+//->replyTo('fabien@example.com')
+//->priority(Email::PRIORITY_HIGH)
+->subject($contact->getSujet())
+->text($contact->getMessage())
+->html('<p>See Twig integration for better HTML integration!</p>');
+
+try{
+    $mailer->send($email);
+} catch(TransportExceptionInterface $error){
+    echo $error;
+} 
+
           $this->addFlash(
               'success',
               'votre demande a été envoyé avec succés '
@@ -38,7 +59,13 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-    
+    #[Route('/pageadresses',name:'pageadresses')]
+    public function pageadresse():Response
+    {
+        return $this->render('home/pageadresses.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
     #[Route('/adresses',name:'adresses')]
     public function adresses():Response
     {
@@ -53,7 +80,15 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
+    #[Route('/contactnav',name:'contactnav')]
+    public function contact():Response
+    {
+        return $this->render('home/contact.html.twig', [
+            'controller_name' => 'HomeController',
+            
+        ]);
+    }
+   
 
 }
 

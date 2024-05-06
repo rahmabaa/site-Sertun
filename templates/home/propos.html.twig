@@ -1,8 +1,12 @@
 {% extends "base.html.twig" %}
-{% block body  %}
-
-<div style="background-color:transparent;
-width: 100%;
-height:50px;"></div>
-{% include 'contact/pagecontact.html.twig' %}
-{% endblock %}
+{% block head %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/propos.css') }}" type="text/css">
+        {% endblock %}
+    {% endblock %}
+    {% block body %}
+        {% include 'composant/_navbar.html.twig' %}
+        {% include 'composant/apropos.html.twig' %}
+        {% include 'contact/pagecontact.html.twig' %}
+    {% endblock %}
+    
