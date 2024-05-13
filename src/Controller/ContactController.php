@@ -8,12 +8,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 class ContactController extends AbstractController
 {   
     #[Route('/contact', name: 'contact', methods:['GET','POST'])]
     public function index(Request $request
     ,EntityManagerInterface $manager,
+    MailerInterface $mailer
     ): Response
     { 
         $contact = new Contact();
@@ -23,12 +29,31 @@ class ContactController extends AbstractController
            $contact = $form->getData();
   
           $manager->persist($contact);
-          $manager->flush();  
-  $this->addFlash(
-              'success',
-              'votre demande a été envoyé avec succés '
-          );
-          return $this->redirectToRoute('tarif');}
+          $manager->flush(); 
+          //email
+          $email = (new TemplatedEmail())
+          ->from($contact->getEmail())
+          ->to('benattiarahma0@gmail.com')
+          //->cc('cc@example.com')
+          //->bcc('bcc@example.com')
+          //->replyTo('fabien@example.com')
+          //->priority(Email::PRIORITY_HIGH)
+          ->subject($contact->getSujet())
+          ->text($contact->getMessage())
+          ->htmlTemplate('contact/email.html.twig')
+          ;
+      try {
+          $mailer->send($email);
+      } catch (TransportExceptionInterface $error) {
+          echo $error;
+      }
+      $this->addFlash(
+          'success',
+          'votre demande a été envoyé avec succés '
+      );
+      return $this->redirectToRoute('accueil');
+    }
+         
   
     
 
@@ -39,34 +64,10 @@ class ContactController extends AbstractController
         
         ]);
     }
-    // pour le contact
-    /* #[Route('/contactnav', name: 'contactnav', methods:['GET','POST'])]
-    public function contact(Request $request
-    ,EntityManagerInterface $manager,
-    ): Response
-    { 
-        $contact = new Contact();
-        $form=$this->createForm( SiteContactType::class,$contact);
-     $form->handleRequest($request);
-    if ($form->isSubmitted() && $form->isValid()) {
-           $contact = $form->getData();
-  
-          $manager->persist($contact);
-          $manager->flush();  
-  $this->addFlash(
-              'success',
-              'votre demande a été envoyé avec succés '
-          );
-          return $this->redirectToRoute('tarif');}
-  
+   
     
 
-      return $this->render('home/contact.html.twig', [
-            'controller_name' => 'ContactController',
-            'form'=>$form->createView()
-            
-        
-        ]);
+      
     // }*/
     // 
     #[Route('/pagecontact',name:'pagecontact')]

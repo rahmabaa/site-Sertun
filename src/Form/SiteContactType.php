@@ -21,7 +21,9 @@ class SiteContactType extends AbstractType
                     'class'=>'form-control ',
                     'minlenght'=>'2',
                     'maxlenght'=>'20',
-                    'placeholder'=>'votre nom'
+                    'placeholder'=>'votre nom',
+                    'autocomplete'=>'off'
+
                 ],
                 'label'=>'Nom',
                 'label_attr'=>[
@@ -36,7 +38,8 @@ class SiteContactType extends AbstractType
                     'class'=>'form-control ',
                     'minlenght'=>'2',
                     'maxlenght'=>'20',
-                    'placeholder'=>'votre prénom'
+                    'placeholder'=>'votre prénom',
+                    'autocomplete'=>'off'
                 ],
                 'label'=>'Prénom',
                 'label_attr'=>[
@@ -51,7 +54,8 @@ class SiteContactType extends AbstractType
                     'class'=>'form-control ',
                     'minlenght'=>'2',
                     'maxlenght'=>'180',
-                    'placeholder'=>'votre email'
+                    'placeholder'=>'votre email ',
+                    'autocomplete'=>'off'
                 ],
                 'label'=>'Adresse email',
                 'label_attr'=>[
@@ -68,7 +72,8 @@ class SiteContactType extends AbstractType
                     'class'=>'form-control ',
                     'minlenght'=>'2',
                     'maxlenght'=>'100',
-                    'placeholder'=>"L'objet de votre message"
+                    'placeholder'=>"L'objet de votre message",
+                    'autocomplete'=>'off'
                 ],
                 'label'=>'sujet',
                 'label_attr'=>[
@@ -81,7 +86,8 @@ class SiteContactType extends AbstractType
             ->add('message',TextareaType::class,[
                 'attr'=>[
                     'class'=>'form-control ',
-                    'placeholder'=>"Votre message"
+                    'placeholder'=>"Votre message",
+                    'autocomplete'=>'off'
                     
                 ],
                 'label'=>'Message',

@@ -3,163 +3,22 @@
     margin: 0;
 }
 
-.divVide {
-    background-color: transparent;
-    width: 100%;
-    height: 50px;
-}
-
-.grandDiv {
-    background-color: #191919;
-    width: 100%;
-    height: 500px;
-}
-
-.sertun {
-    background-color: transparent;
-    height: 50px;
-    width: 100%;
-}
-
-.sertun h1 {
-    text-transform: capitalize;
-    /*font-family: 'Times New Roman', Times, serif;*/
-    font-style: normal;
-    color: white;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Arial', sans-serif;
-}
-
-.divformulaire h1 {
-    color: #333;
-}
-
-.email {
-    background-color: transparent;
-    height: 50px;
-}
-
-.email p {
-    /*font-family: 'Times New Roman', Times, serif;*/
-    font-style: normal;
-    font-size: 17px;
-    color: gray;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
-.email p:hover {
-    color: white;
-}
-
-.fa-map-marker {
-    margin-top: 0px
-}
-
-.adresse {
-    background-color: transparent;
-    height: 50px;
-}
-
-.adresse p {
-    /*font-family: 'Times New Roman', Times, serif;*/
-    font-style: normal;
-    font-family: 'Arial', sans-serif;
-    font-size: 17px;
-    color: gray;
-    /*text-align: center;*/
-    display: flex;
-    justify-content: center;
-}
-
-.adresse a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.tel {
-    background-color: transparent;
-    height: 50px;
-}
-
-.tel p {
-    /* font-family: 'Times New Roman', Times, serif;*/
-    font-style: normal;
-    font-size: 17px;
-    color: gray;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
-.tel p:hover {
-    color: white;
-}
-
-.icon {
-    background-color: transparent;
-    width: 100%;
-    height: 90px;
-    /*position:relative;*/
-    display: flex;
-    justify-content: center;
-}
-
-i {
-    color: white;
-    font-size: 30px;
-    margin: 8px;
-}
-
-.icon i {
-    color: white;
-    font-size: 45px;
-    margin: 8px;
-    /* margin-left: auto;  margin-right: auto;*/
-    margin-top: 25px;
-}
-
-a {
-    color: white;
-    font-size: 30px;
-    margin: 8px;
-}
-
-.icon a {
-    color: white;
-    font-size: 45px;
-    margin: 8px;
-    /* margin-left: auto;  margin-right: auto;*/
-    margin-top: 25px;
-}
-
-.icon a:hover {
-    text-decoration: none;
-}
-
-.COPYRIGHT p {
-    /*font-family: 'Times New Roman', Times, serif;*/
-    font-style: normal;
-    color: gray;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
 
 /***************css pour formulaire de contact**********************/
 
-#h8 {
-    width: 95%;
+#grand-div {
+    width: 100%;
     /* visibility: visible !important; */
     background-color: white;
     border-radius: 5px;
     border: 2px solid white;
-    box-shadow: 4px 5px 8px 4px #D3D3D3;
-    height: 590px;
+    /* box-shadow: 4px 5px 8px 4px #D3D3D3; */
+    height: 600px;
     margin-top: 8px;
+    cursor: pointer;
     /* margin-bottom: 20px; */
     /* padding: 15px; */
-    margin-left: 30px;
+    /* margin-left: 30px; */
     /* border-radius: 10px; */
     /* border: 1px solid #333; */
     /*box-shadow: 0 2px 10px -3px #D3D3D3;*/
@@ -181,23 +40,25 @@ a {
 
 .divformulaire {
     display: inline-block;
-    width: 50%;
-    align-items: flex;
-    justify-content: right;
-    margin-left: 10px;
+    width: 35%;
+    /* text-align: center; */
+    align-items: center;
+    /* justify-content: right; */
+    margin-left: 70px;
     margin-bottom: 2px;
     margin-top: 25px;
 }
 
 .divformulaire button {
     padding: 10px 20px;
-    background-color: #0087ff;
+    background-color: #FF4500;
     color: white;
     border: none;
+    /* margin-right: 10px; */
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin: 0 auto;
+    /* margin: auto; */
 }
 
 .divformulaire label {
@@ -209,26 +70,26 @@ a {
 .divformulaire input[type="text"],
 .divformulaire input[type="email"],
 .divformulaire textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
 }
 
 .divformulaire button:hover {
-    background-color: #0000FF;
-    color: white;
+    background-color: #FF4500;
+    color: black;
 }
 
 .divinformations {
-    width: 35%;
+    width: 40%;
     float: left;
     margin-top: 50px;
-    margin-left: 40px;
+    margin-left: 60px;
     background-color: transparent;
-    height: 430px;
+    height: 490px;
     margin-right: 80px;
-    background-image: url('/images/cont.jpg');
+    /* background-image: url('/images/cont.jpg'); */
     background-size: cover;
     border-radius: 5px;
     display: flexbox;
@@ -236,47 +97,139 @@ a {
     /*border: 2px solid #333;*/
 }
 
-.divinformations h5 {
+.divinformations h1 {
     /*color: black;*/
     font-family: 'Arial' sans-serif;
-    font-size: 22px;
+    font-size: 32px;
     color: #333;
-    margin-left: 30px;
-    margin-top: 30px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: -8px;
+}
+
+.divinformations #pinfo {
+    /* background-color: #FF4500; */
+    text-align: left;
+}
+
+.divinformations #pinfo:hover {
+    color: #FF4500;
 }
 
 .adresseform {
     font-family: 'Arial'sans-serif;
     /* color: black;*/
+    background-color: transparent;
     text-align: center;
-    margin-left: 30px;
+    /* margin-left: 0px; */
     font-size: 19px;
     margin-top: 25px;
     font-style: normal;
-    color: #333;
+    color: grey;
     margin-right: 40px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-.emailform {
-    color: #333;
+.adresseform i {
+    width: 55px;
+    height: auto;
+    padding: 5px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
     text-align: center;
-    margin-top: 25px;
-    margin-left: 30px;
-    margin-right: 40px;
-    font-size: 19px;
-    font-family: 'Arial'sans-serif;
-    font-style: normal;
+    /* background-color: #ff4400ea; */
+    border-radius: 10px;
+    top: 10px;
+    /* border: 2px solid; */
+    /* border-color: #FF4500; */
+    font-size: 30px;
+}
+
+.adresseform #titre {
+    text-align: left;
+    /* margin-right: 200px; */
+    font-size: 25px;
+    color: black;
 }
 
 .telform {
     font-family: 'Arial'sans-serif;
-    color: #333;
+    /* color: black;*/
+    background-color: transparent;
     text-align: center;
-    margin-left: 30px;
-    margin-right: 40px;
+    /* margin-left: 0px; */
     font-size: 19px;
+    margin-top: 25px;
     font-style: normal;
-    margin-top: 21px;
+    color: grey;
+    margin-right: 40px;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.telform i {
+    width: 55px;
+    height: auto;
+    padding: 5px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+    text-align: center;
+    /* background-color: #ff4400ea; */
+    border-radius: 10px;
+    top: 10px;
+    /* border: 2px solid; */
+    /* border-color: #FF4500; */
+    font-size: 30px;
+}
+
+.telform #titre {
+    text-align: left;
+    font-size: 25px;
+    color: black;
+}
+
+.emailform {
+    font-family: 'Arial'sans-serif;
+    /* color: black;*/
+    background-color: transparent;
+    text-align: center;
+    /* margin-left: 0px; */
+    font-size: 19px;
+    margin-top: 25px;
+    font-style: normal;
+    color: grey;
+    margin-right: 40px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.emailform i {
+    width: 55px;
+    height: auto;
+    padding: 5px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+    text-align: center;
+    /* background-color: #ff4400ea; */
+    border-radius: 10px;
+    top: 10px;
+    /* border: 2px solid; */
+    border-color: #FF4500;
+    font-size: 30px;
+}
+
+.emailform #titre {
+    text-align: left;
+    font-size: 25px;
+    color: black;
 }
 
 .telform .fa-phone {

@@ -50,7 +50,7 @@ img {
 #btnimg {
     text-align: center;
     justify-content: center;
-    position: sticky;
+    position: relative;
     left: 45%;
     top: 12px;
     /* transition: 0.5s; */

@@ -6,10 +6,10 @@
 .divcontenu {
     width: 100%;
     height: auto;
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
-    text-align: left;
-    background-color: goldenrod;
+    text-align: center;
+    background-color: white;
     /* align-items: center; */
     /* justify-content: center; */
     padding: 8px;
@@ -54,16 +54,18 @@ h2 {
     /* z-index: 1; */
     margin-top: 50px;
     text-align: left;
+    margin-left: 200px;
     /* background-color: blueviolet; */
 }
 
-p {
+.par {
     /* font-family: 'Arial', sans-serif; */
     z-index: 1;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     font-size: 19px;
     color: grey;
+    margin-left: 200px;
 }
 
 
