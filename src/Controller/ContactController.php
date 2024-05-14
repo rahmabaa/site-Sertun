@@ -27,7 +27,7 @@ class ContactController extends AbstractController
      $form->handleRequest($request);
     if ($form->isSubmitted() && $form->isValid()) {
            $contact = $form->getData();
-  
+//   dd($contact);
           $manager->persist($contact);
           $manager->flush(); 
           //email
@@ -41,7 +41,9 @@ class ContactController extends AbstractController
           ->subject($contact->getSujet())
           ->text($contact->getMessage())
           ->htmlTemplate('contact/email.html.twig')
+          
           ;
+        //   dd($email);
       try {
           $mailer->send($email);
       } catch (TransportExceptionInterface $error) {
@@ -59,7 +61,10 @@ class ContactController extends AbstractController
 
       return $this->render('contact/formulairecontact.html.twig', [
             'controller_name' => 'ContactController',
-            'form'=>$form->createView()
+            'form'=>$form->createView(),
+            'contact' => $contact,
+            
+            
             
         
         ]);
