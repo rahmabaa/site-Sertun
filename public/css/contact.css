@@ -72,8 +72,27 @@
 .divformulaire textarea {
     width: 80%;
     padding: 10px;
-    /* border: 1px solid #ccc; */
+    border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.divformulaire textarea:focus {
+    border: 1px solid #ccc;
+    border-style: solid;
+    box-shadow: none;
+}
+
+.divformulaire input[type="text"]:focus {
+    border: 1px solid #ccc;
+    border-style: solid;
+    box-shadow: none;
+}
+
+.divformulaire input[type="email"]:focus {
+    /* outline: grey; */
+    border: 1px solid #ccc;
+    border-style: solid;
+    box-shadow: none;
 }
 
 .divformulaire button:hover {
